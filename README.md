@@ -1,2 +1,2 @@
-# scribble-jam
-Scribble Jam
+# Scribble Jam
+Scribble Jam, gamejam, 2021.
