@@ -23,3 +23,7 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.name == "Star":
+			get_tree().change_scene("res://End.tscn")
