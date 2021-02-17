@@ -26,6 +26,6 @@ func _physics_process(_delta):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision.collider.name == "Star":
-			get_tree().change_scene("res://Star.tscn")
+			get_tree().change_scene("res://nivellTuto2.tscn")
 		elif collision.collider.name == "Among" || collision.collider.name == "Conill":
-			get_tree().change_scene("res://Star.tscn")
+			get_tree().change_scene("res://nivellTuto5.tscn")

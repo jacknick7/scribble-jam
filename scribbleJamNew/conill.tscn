@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://conill.png" type="Texture" id=1]
+[ext_resource path="res://conill2.png" type="Texture" id=2]
+[ext_resource path="res://conill3.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="conill" type="AnimatedSprite"]
+position = Vector2( 549.223, 348.46 )
+scale = Vector2( 0.881517, 0.893989 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
