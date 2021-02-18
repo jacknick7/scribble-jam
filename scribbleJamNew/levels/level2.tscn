@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://actors/Coin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WallH.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WallV.tscn" type="PackedScene" id=4]
+[ext_resource path="res://WallD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://actors/Paret.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Fons.tscn" type="PackedScene" id=8]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Fons" parent="." instance=ExtResource( 8 )]
+
+[node name="Floor" parent="." instance=ExtResource( 6 )]
+
+[node name="WallD" parent="." instance=ExtResource( 5 )]
+position = Vector2( -0.00012207, 0 )
+tile_data = PoolIntArray( 1245203, 5, 0, 1245214, 5, 0, 1900604, 5, 0, 2621500, 5, 0, 3276819, 5, 0, 3276820, 5, 0, 3276821, 5, 0, 3276822, 5, 0, 3276823, 5, 0, 3276824, 5, 0, 3276825, 5, 0, 3276826, 5, 0, 3276827, 5, 0, 3276828, 5, 0, 3276829, 5, 0, 3276830, 5, 0 )
+
+[node name="WallH" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( 1245188, 1, 0, 1245189, 1, 0, 1900550, 1, 0, 1900551, 1, 0, 1900552, 1, 0, 1900553, 1, 0, 1900554, 1, 0, 1900555, 1, 0, 2621446, 1, 0, 2621447, 1, 0, 2621448, 1, 0, 2621449, 1, 0, 2621450, 1, 0, 2621451, 1, 0, 3276804, 1, 0, 3276805, 1, 0 )
+
+[node name="WallV" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray( 262163, 0, 0, 262174, 0, 0, 327699, 0, 0, 327710, 0, 0, 393235, 0, 0, 393276, 0, 0, 458771, 0, 0, 458812, 0, 0, 524307, 0, 0, 524318, 0, 0, 589843, 0, 0, 589854, 0, 0 )
+
+[node name="Paret" parent="." instance=ExtResource( 7 )]
+position = Vector2( 246.166, 247.355 )
+
+[node name="Coin" parent="." instance=ExtResource( 1 )]
+position = Vector2( 552.982, 347.249 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 247.355, 447.142 )

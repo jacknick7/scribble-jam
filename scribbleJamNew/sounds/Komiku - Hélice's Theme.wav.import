@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Komiku - Hélice's Theme.wav-f4b9d0bdd53c20ae9e6fa928c70452c0.sample"
+
+[deps]
+
+source_file="res://sounds/Komiku - Hélice's Theme.wav"
+dest_files=[ "res://.import/Komiku - Hélice's Theme.wav-f4b9d0bdd53c20ae9e6fa928c70452c0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
