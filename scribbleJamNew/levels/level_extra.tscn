@@ -10,7 +10,8 @@
 [ext_resource path="res://Fons.tscn" type="PackedScene" id=8]
 [ext_resource path="res://actors/conill.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Base.tscn" type="PackedScene" id=10]
-[ext_resource path="res://actors/huma.tscn" type="PackedScene" id=11]
+[ext_resource path="res://actors/Huma.tscn" type="PackedScene" id=11]
+
 
 
 

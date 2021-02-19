@@ -15,9 +15,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="scribbleJam"
+config/name="Scraze"
 run/main_scene="res://levels/start.tscn"
-config/icon="res://icon.png"
+config/icon="res://sprites/among/among1.png"
+config/windows_native_icon="res://among1.ico"
 
 [autoload]
 

@@ -44,6 +44,25 @@ func select_image():
 		get_node("AnimatedSpriteR").visible = true
 		get_node("AnimatedSpriteD").frame = 3
 		get_node("AnimatedSpriteD").visible = true
+	elif (level == 6): 
+		get_node("AnimatedSpriteL").frame = 9
+		get_node("AnimatedSpriteL").visible = true
+		get_node("AnimatedSpriteR").frame = 5
+		get_node("AnimatedSpriteR").visible = true
+		get_node("AnimatedSpriteD").frame = 0
+		get_node("AnimatedSpriteD").visible = true
+	elif (level == 7): 
+		get_node("AnimatedSpriteD").frame = 2
+		get_node("AnimatedSpriteD").visible = true
+		get_node("AnimatedSpriteR").frame = 4
+		get_node("AnimatedSpriteR").visible = true
+		get_node("AnimatedSpriteU").frame = 3
+		get_node("AnimatedSpriteU").visible = true
+	elif (level == 8): 
+		get_node("AnimatedSpriteU").frame = 2
+		get_node("AnimatedSpriteU").visible = true
+		get_node("AnimatedSpriteD").frame = 0
+		get_node("AnimatedSpriteD").visible = true
 
 
 func _on_body_exited(_body):
