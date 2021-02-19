@@ -6,6 +6,14 @@ var velocity = Vector2()
 var nextLevel = false
 var death = false
 var timer = 0
+var level = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var name = get_tree().get_current_scene().get_name()
+	name = name.right(5)
+	level = int(name)
+
 
 func get_input():
 	velocity = Vector2()
@@ -23,30 +31,61 @@ func get_input():
 		velocity.y = 0
 	velocity = velocity.normalized() * speed
 
+
 func _physics_process(_delta):
 	if !nextLevel && !death:
 		get_input()
 		velocity = move_and_slide(velocity)
 		for i in get_slide_count():
 			var collision = get_slide_collision(i)
-			if collision.collider.name == "Coin":
-				get_node("Player").visible = false
-				get_node("PlayerWin").visible = true
-				# Remove Coin sprite
-				get_node("AudioStreamPlayer2D").playing = true
-				nextLevel = true
-			elif collision.collider.name == "Among" || collision.collider.name == "Conill" || collision.collider.name == "Paret":
-				get_node("Player").visible = false
-				get_node("PlayerDeath").visible = true
-				# Sound death here
-				death = true
+			if collision.collider.name == "Coin": handle_coin_collision()
+			elif collision.collider.name == "Paret": handle_paret_collision()
+			elif collision.collider.name == "Conill": handle_conill_collision()
+			elif collision.collider.name == "Among": handle_among_collision()
+			elif collision.collider.name == "Huma": handle_huma_collision()
+
+
+func handle_coin_collision():
+	if (level == 1) || (level == 2) || (level == 4): win()
+	elif (level == 3) || (level == 5): lose()
+
+
+func handle_paret_collision():
+	if (level == 3) || (level == 5): win()
+	elif (level == 2) || (level == 4): lose()
+
+
+func handle_conill_collision():
+	lose()
+
+func handle_among_collision():
+	lose()
+
+
+func handle_huma_collision():
+	lose()
+
+
+func win():
+	get_node("Player").visible = false
+	get_node("PlayerWin").visible = true
+	# Remove Coin sprite
+	get_node("AudioStreamPlayer2D1").playing = true
+	nextLevel = true
+
+
+func lose():
+	get_node("Player").visible = false
+	get_node("PlayerDeath").visible = true
+	# Remove enemy sprite?
+	get_node("AudioStreamPlayer2D2").playing = true
+	death = true
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if nextLevel && (timer == 60): 
-		var name = get_tree().get_current_scene().get_name()
-		name = name.right(5)
-		name = String(int(name) + 1)
+		var name = String(int(level) + 1)
 		if name == "6": name = "1"
 		name = "res://levels/level" + name + ".tscn"
 		get_tree().change_scene(name) == OK
