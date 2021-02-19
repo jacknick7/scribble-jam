@@ -15,10 +15,10 @@ func _ready():
 
 func get_movement():
 	velocity = Vector2()
-	if (level == 7):
+	if (level == 8):
 		if dir: velocity.y += 1
 		else: velocity.y -= 1
-	elif (level == 6):
+	elif (level == 7):
 		if dir: velocity.x += 1
 		else: velocity.x -= 1
 	velocity = velocity.normalized() * speed

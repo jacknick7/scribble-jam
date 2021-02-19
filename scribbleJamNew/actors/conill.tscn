@@ -4,7 +4,6 @@
 [ext_resource path="res://sprites/conill/conill2.png" type="Texture" id=2]
 [ext_resource path="res://sprites/conill/conill3.png" type="Texture" id=3]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 2 ) ],
@@ -17,5 +16,5 @@ animations = [ {
 position = Vector2( 549.223, 348.46 )
 scale = Vector2( 0.881517, 0.893989 )
 frames = SubResource( 1 )
-frame = 2
+frame = 1
 playing = true

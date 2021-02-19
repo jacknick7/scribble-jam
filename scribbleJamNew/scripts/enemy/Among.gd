@@ -15,7 +15,7 @@ func _ready():
 
 func get_movement():
 	velocity = Vector2()
-	if (level == 4) || (level == 7) || (level == 8):
+	if (level == 4) || (level == 8) || (level == 6):
 		if dir: velocity.y += 1
 		else: velocity.y -= 1
 	elif (level == 5):
