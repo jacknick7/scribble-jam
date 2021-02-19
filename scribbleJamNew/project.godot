@@ -23,6 +23,10 @@ config/icon="res://icon.png"
 
 BackgroundMusic="*res://levels/backgroundMusic.tscn"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 up={

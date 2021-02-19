@@ -13,6 +13,7 @@ func _ready():
 	var name = get_tree().get_current_scene().get_name()
 	name = name.right(5)
 	level = int(name)
+	#if level == 2: get_node("Sprite").visible = true
 
 
 func get_input():
