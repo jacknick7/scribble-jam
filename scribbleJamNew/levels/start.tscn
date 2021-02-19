@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/start1.png" type="Texture" id=1]
+[ext_resource path="res://images/start2.png" type="Texture" id=2]
+[ext_resource path="res://scripts/start.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 512.955, 300.12 )
+scale = Vector2( 1.61119, 1.67189 )
+frames = SubResource( 1 )
+playing = true
