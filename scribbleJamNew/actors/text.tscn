@@ -1,0 +1,53 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://sprites/text/text1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/text/text2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/text/text3.png" type="Texture" id=3]
+[ext_resource path="res://sprites/text/muercielago_enemigo.png" type="Texture" id=4]
+[ext_resource path="res://sprites/text/murcielago_amigp.png" type="Texture" id=5]
+[ext_resource path="res://sprites/text/pincho_amigo.png" type="Texture" id=6]
+[ext_resource path="res://sprites/text/humano_enemigo.png" type="Texture" id=7]
+[ext_resource path="res://sprites/text/pincho_enemigo.png" type="Texture" id=8]
+[ext_resource path="res://sprites/text/among_amigo.png" type="Texture" id=9]
+[ext_resource path="res://sprites/text/estrella_amigo.png" type="Texture" id=10]
+[ext_resource path="res://sprites/text/among_enemigo.png" type="Texture" id=11]
+[ext_resource path="res://sprites/text/humano_amigo.png" type="Texture" id=12]
+[ext_resource path="res://sprites/text/estrella_enemigo.png" type="Texture" id=13]
+[ext_resource path="res://scripts/text/text.gd" type="Script" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 35.3072, 45.9618 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 14 )
+
+[node name="AnimatedSprite1" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -100 )
+scale = Vector2( 0.64, 0.64 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 2 )
