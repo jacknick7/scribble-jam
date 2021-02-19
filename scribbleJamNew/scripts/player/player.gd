@@ -46,6 +46,8 @@ func _physics_process(_delta):
 			if collision.collider.name == "Coin": handle_coin_collision()
 			elif collision.collider.name == "Paret": handle_paret_collision()
 			elif collision.collider.name == "Paret2": handle_paret_collision()
+			elif collision.collider.name == "Paret3": handle_paret_collision()
+			elif collision.collider.name == "Paret2": handle_paret_collision()
 			elif collision.collider.name == "Conill": handle_conill_collision()
 			elif collision.collider.name == "Among": handle_among_collision()
 			elif collision.collider.name == "Among2": handle_among_collision()
@@ -53,27 +55,30 @@ func _physics_process(_delta):
 			elif collision.collider.name == "Among4": handle_among_collision()
 			elif collision.collider.name == "Among5": handle_among_collision()
 			elif collision.collider.name == "Huma": handle_huma_collision()
+			elif collision.collider.name == "Huma2": handle_huma_collision()
+			elif collision.collider.name == "Huma3": handle_huma_collision()
 
 
 func handle_coin_collision():
 	if (level == 1) || (level == 2) || (level == 4) || (level == 7) || (level == 6): win()
-	elif (level == 3) || (level == 5) || (level == 8): lose()
+	elif (level == 3) || (level == 5) || (level == 8) || (level == 9): lose()
 
 
 func handle_paret_collision():
 	if (level == 3) || (level == 5): win()
-	elif (level == 2) || (level == 4) || (level == 7): lose()
+	elif (level == 2) || (level == 4) || (level == 7) || (level == 9): lose()
 
 
 func handle_conill_collision():
 	lose()
 
 func handle_among_collision():
-	reset()
+	if level == 9: win()
+	else: reset()
 
 
 func handle_huma_collision():
-	if (level == 7): reset()
+	if (level == 7) || (level == 9): reset()
 	elif (level == 8): win()
 	else: lose()
 
@@ -103,7 +108,7 @@ func lose():
 func _process(_delta):
 	if nextLevel && (timer == 60): 
 		var name = String(int(level) + 1)
-		if name == "9": get_tree().change_scene("res://levels/win.tscn") == OK
+		if name == "10": get_tree().change_scene("res://levels/win.tscn") == OK
 		else:
 			name = "res://levels/level" + name + ".tscn"
 			get_tree().change_scene(name) == OK

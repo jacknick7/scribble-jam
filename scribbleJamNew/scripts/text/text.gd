@@ -63,6 +63,9 @@ func select_image():
 		get_node("AnimatedSpriteU").visible = true
 		get_node("AnimatedSpriteD").frame = 0
 		get_node("AnimatedSpriteD").visible = true
+	elif (level == 9): 
+		get_node("AnimatedSpriteD").frame = 1
+		get_node("AnimatedSpriteD").visible = true
 
 
 func _on_body_exited(_body):
